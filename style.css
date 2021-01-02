@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color: #A6E4A1;
+
+    transition: all ease 0.5s;
+}
+
+#FirstScreen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#FirstScreenTitle {
+    margin-top: 200px;
+
+    color: #f0f0f0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 35pt;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.GenderButtons {
+    width: 150px;
+    height: 150px;
+
+    margin-top: 80px;
+
+    border: 0;
+}
+
+#MasculineButton {
+    background-color: #365CC1;
+}
+
+#MasculineButton:hover {
+    cursor: pointer;
+}
+
+
+#FeminineButton {
+    background-color: #C13636;
+}
+
+#FeminineButton:hover {
+    cursor: pointer;
+}
+
+#OtherButton {
+    background-color: #F0F0F0;
+
+    color: #6d6d6d;
+    font-size: 18pt;
+}
+
+#OtherButton:hover {
+    cursor: pointer;
+}
+
+#BinaryGenderButtonsDiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#BinaryGenderButtonsDiv button {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#NonBinaryGenderButtonsDiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
