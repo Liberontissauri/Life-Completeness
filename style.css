@@ -14,6 +14,8 @@ body {
     transition: all ease 0.5s;
 }
 
+/*Gender Selection Screen*/
+
 #FirstScreen {
     display: flex;
     justify-content: center;
@@ -90,3 +92,78 @@ body {
     justify-content: center;
 }
 
+/* End Of The Gender Selection Screen */
+
+/* Age Input Screen */
+
+#SecondScreen {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#SecondScreenTitle {
+    position: relative;
+    margin-top: 200px;
+
+    color: #f0f0f0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 35pt;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all ease 0.5s;
+}
+
+#AgeInputDiv {
+    display: flex;
+    justify-content: center;
+    
+
+    margin-top: 80px;
+}
+
+#AgeInput {
+    width: 200px;
+    height: 60px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+
+    border: 0;
+    border-radius: 25px;
+    
+    font-size: 25pt;
+    text-align: center;
+
+    /* remove arrows in the input field*/
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    
+}
+
+#SubmitAgeDiv {
+    display: flex;
+    justify-content: center;
+    
+
+    margin-top: 80px;
+}
+
+#SubmitAgeButton {
+    width: 300px;
+    height: 60px;
+
+    border-radius: 30px;
+    border: 0;
+
+    font-size: 20pt;
+    
+    font-family: 'Roboto', 'sans-serif';
+}
