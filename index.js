@@ -15,6 +15,10 @@ const secondScreen = document.querySelector("#SecondScreen");
 
 const secondScreenTitle = document.querySelector("#SecondScreenTitle");
 
+const ageInputField = document.querySelector("#AgeInput");
+
+const sumbitAgeButton = document.querySelector("#SubmitAgeButton");
+
 
 // Gender Menu
 
@@ -65,3 +69,13 @@ otherBtn.addEventListener("click", () => {
 
 secondScreenTitle.addEventListener("mouseover", () => secondScreenTitle.style.fontSize = "37pt");
 secondScreenTitle.addEventListener("mouseout", () => secondScreenTitle.style.fontSize = "35pt");
+
+// Ok Button Click
+
+let selectedAge;
+
+sumbitAgeButton.addEventListener("click", () => {
+    if (ageInputField.value == "") return alert("There are non numeric characters in the field.")
+    selectedAge = ageInputField.value;
+    secondScreen.style.display = "none";
+})
