@@ -166,4 +166,16 @@ body {
     font-size: 20pt;
     
     font-family: 'Roboto', 'sans-serif';
+
+    background-color: #f0f0f0;
+
+    transition: ease 0.5s;
+}
+
+#SubmitAgeButton:hover {
+    background-color: #e2e2e2;
+    
+    transition: ease 0.5s;
+
+    cursor: pointer;
 }
