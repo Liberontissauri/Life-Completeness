@@ -7,11 +7,14 @@ const feminineBtn = document.querySelector("#FeminineButton");
 
 const otherBtn = document.querySelector("#OtherButton");
 
-const FirstScreenTitle = document.querySelector("#FirstScreenTitle");
+const firstScreenTitle = document.querySelector("#FirstScreenTitle");
 
-const FirstScreen = document.querySelector("#FirstScreen");
+const firstScreen = document.querySelector("#FirstScreen");
 
-const SecondScreen = document.querySelector("#SecondScreen");
+const secondScreen = document.querySelector("#SecondScreen");
+
+const secondScreenTitle = document.querySelector("#SecondScreenTitle");
+
 
 // Gender Menu
 
@@ -28,37 +31,37 @@ otherBtn.addEventListener("mouseout", () => document.body.style.backgroundColor 
 
 //Hover animation for the Title (go upwards on hover)
 
-FirstScreenTitle.addEventListener("mouseover", () => FirstScreenTitle.style.fontSize = "37pt");
-FirstScreenTitle.addEventListener("mouseout", () => FirstScreenTitle.style.fontSize = "35pt");
+firstScreenTitle.addEventListener("mouseover", () => firstScreenTitle.style.fontSize = "37pt");
+firstScreenTitle.addEventListener("mouseout", () => firstScreenTitle.style.fontSize = "35pt");
 
 // Gender Button Click
 
 let selectedGender; // "Male" / "Female" / "Other"
 
 masculineBtn.addEventListener("click", () => {
-    FirstScreen.style.display = "none";
+    firstScreen.style.display = "none";
     selectedGender = "Male";
     document.body.style.backgroundColor = "#A6E4A1";
-    SecondScreen.style.display = "flex";
+    secondScreen.style.display = "flex";
 })
 
 feminineBtn.addEventListener("click", () => {
-    FirstScreen.style.display = "none";
+    firstScreen.style.display = "none";
     selectedGender = "Female";
     document.body.style.backgroundColor = "#A6E4A1";
-    SecondScreen.style.display = "flex";
+    secondScreen.style.display = "flex";
 })
 
 otherBtn.addEventListener("click", () => {
-    FirstScreen.style.display = "none";
+    firstScreen.style.display = "none";
     selectedGender = "Other";
     document.body.style.backgroundColor = "#A6E4A1";
-    SecondScreen.style.display = "flex";
+    secondScreen.style.display = "flex";
 })
 
 // Age Menu
 
 //Hover animation for the Title (go upwards on hover)
 
-SecondScreenTitle.addEventListener("mouseover", () => SecondScreenTitle.style.fontSize = "37pt");
-SecondScreenTitle.addEventListener("mouseout", () => SecondScreenTitle.style.fontSize = "35pt");
+secondScreenTitle.addEventListener("mouseover", () => secondScreenTitle.style.fontSize = "37pt");
+secondScreenTitle.addEventListener("mouseout", () => secondScreenTitle.style.fontSize = "35pt");
