@@ -19,6 +19,8 @@ const ageInputField = document.querySelector("#AgeInput");
 
 const sumbitAgeButton = document.querySelector("#SubmitAgeButton");
 
+const thirdScreen = document.querySelector("#ThirdScreen");
+
 
 // Gender Menu
 
@@ -78,4 +80,6 @@ sumbitAgeButton.addEventListener("click", () => {
     if (ageInputField.value == "") return alert("There are non numeric characters in the field.")
     selectedAge = ageInputField.value;
     secondScreen.style.display = "none";
+    thirdScreen.style.display = "flex";
+    document.body.style.backgroundColor = "#f0f0f0";
 })
