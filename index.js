@@ -134,11 +134,11 @@ function updateResultsInnerProgressBarAge () {
 
 function updateResultsText() {
     StatisticYears.innerText = `You have Lived for ${selectedAge} years.`;
-    StatisticWeeks.innerText = `You have Lived for ${selectedAge * 7} weeks.`;
-    StatisticDays.innerText = `You have been alive for ${selectedAge*365} days.`;
-    StatisticHours.innerText = `${selectedAge*365*24} hours have passed by since you were born.`;
-    StatisticMinutes.innerText = `You have Lived for ${selectedAge*365*24*60} minutes.`
-    StatisticSeconds.innerText = `You have been alive for ${selectedAge*365*24*60*60} Seconds.`
+    StatisticWeeks.innerText = `You have Lived for ${selectedAge * 12 *  7} weeks.`;
+    StatisticDays.innerText = `You have been alive for ${selectedAge * 365} days.`;
+    StatisticHours.innerText = `${selectedAge * 365 * 24} hours have passed by since you were born.`;
+    StatisticMinutes.innerText = `You have Lived for ${selectedAge * 365 * 24 * 60} minutes.`
+    StatisticSeconds.innerText = `You have been alive for ${selectedAge * 365 * 24 * 60 * 60} Seconds.`
 
     switch(selectedGender) {
         case "Male":
