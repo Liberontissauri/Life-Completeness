@@ -21,6 +21,10 @@ const sumbitAgeButton = document.querySelector("#SubmitAgeButton");
 
 const thirdScreen = document.querySelector("#ThirdScreen");
 
+const innerProgressBarAge = document.querySelector("#InnerProgressBarAge");
+
+const barText = document.querySelector("#BarText");
+
 
 // Gender Menu
 
@@ -82,4 +86,34 @@ sumbitAgeButton.addEventListener("click", () => {
     secondScreen.style.display = "none";
     thirdScreen.style.display = "flex";
     document.body.style.backgroundColor = "#f0f0f0";
+
+    updateResults()
 })
+
+// Results Menu
+
+function updateResults() {
+    updateResultsInnerProgressBarAge();
+}
+
+function updateResultsInnerProgressBarAge () {
+    switch(selectedGender) {
+        case "Male":
+            innerProgressBarAge.style.backgroundColor = "#365CC1";
+            innerProgressBarAge.style.width = Math.floor((selectedAge/70.8)*100) + "%";
+            barText.innerText = `Congratulations, you have already lived ${Math.floor((selectedAge/70.8)*100)}% of your life!`
+            break;
+
+        case "Female":
+            innerProgressBarAge.style.backgroundColor = "#C13636";
+            innerProgressBarAge.style.width = Math.floor((selectedAge/75.6)*100) + "%";
+            barText.innerText = `Congratulations, you have already lived ${Math.floor((selectedAge/75.6)*100)}% of your life!`
+            break;
+
+        case "Other":
+            innerProgressBarAge.style.backgroundColor = "#6d6d6d";
+            innerProgressBarAge.style.width = Math.floor((selectedAge/73.2)*100) + "%";
+            barText.innerText = `Congratulations, you have already lived ${Math.floor((selectedAge/73.2)*100)}% of your life!`
+            break;
+    }
+}
