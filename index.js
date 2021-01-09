@@ -25,6 +25,19 @@ const innerProgressBarAge = document.querySelector("#InnerProgressBarAge");
 
 const barText = document.querySelector("#BarText");
 
+const StatisticYears = document.querySelector("#StatisticYears");
+
+const StatisticWeeks = document.querySelector("#StatisticWeeks");
+
+const StatisticDays = document.querySelector("#StatisticDays");
+
+const StatisticHours = document.querySelector("#StatisticHours");
+
+const StatisticMinutes = document.querySelector("#StatisticMinutes");
+
+const StatisticSeconds = document.querySelector("#StatisticSeconds");
+
+
 
 // Gender Menu
 
@@ -94,6 +107,7 @@ sumbitAgeButton.addEventListener("click", () => {
 
 function updateResults() {
     updateResultsInnerProgressBarAge();
+    updateResultsText();
 }
 
 function updateResultsInnerProgressBarAge () {
@@ -114,6 +128,35 @@ function updateResultsInnerProgressBarAge () {
             innerProgressBarAge.style.backgroundColor = "#6d6d6d";
             innerProgressBarAge.style.width = Math.floor((selectedAge/73.2)*100) + "%";
             barText.innerText = `Congratulations, you have already lived ${Math.floor((selectedAge/73.2)*100)}% of your life!`
+            break;
+    }
+}
+
+function updateResultsText() {
+    StatisticYears.innerText = `You have Lived for ${selectedAge} years.`;
+    StatisticWeeks.innerText = `You have Lived for ${selectedAge * 7} weeks.`;
+    StatisticDays.innerText = `You have been alive for ${selectedAge*365} days.`;
+    StatisticHours.innerText = `${selectedAge*365*24} hours have passed by since you were born.`;
+    StatisticMinutes.innerText = `You have Lived for ${selectedAge*365*24*60} minutes.`
+    StatisticSeconds.innerText = `You have been alive for ${selectedAge*365*24*60*60} Seconds.`
+
+    switch(selectedGender) {
+        case "Male":
+            StatisticYears.style.color = "#365CC1";
+            StatisticDays.style.color = "#365CC1";
+            StatisticMinutes.style.color = "#365CC1";
+            break;
+
+        case "Female":
+            StatisticYears.style.color = "#C13636";
+            StatisticDays.style.color = "#C13636";
+            StatisticMinutes.style.color = "#C13636";
+            break;
+
+        case "Other":
+            StatisticYears.style.color = "#A6E4A1";
+            StatisticDays.style.color = "#A6E4A1";
+            StatisticMinutes.style.color = "#A6E4A1";
             break;
     }
 }
