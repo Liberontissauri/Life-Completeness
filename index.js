@@ -27,6 +27,8 @@ const barText = document.querySelector("#BarText");
 
 const StatisticYears = document.querySelector("#StatisticYears");
 
+const StatisticMonths = document.querySelector("#StatisticMonths");
+
 const StatisticWeeks = document.querySelector("#StatisticWeeks");
 
 const StatisticDays = document.querySelector("#StatisticDays");
@@ -133,30 +135,53 @@ function updateResultsInnerProgressBarAge () {
 }
 
 function updateResultsText() {
-    StatisticYears.innerText = `You have Lived for ${selectedAge} years.`;
-    StatisticWeeks.innerText = `You have Lived for ${selectedAge * 12 *  7} weeks.`;
-    StatisticDays.innerText = `You have been alive for ${selectedAge * 365} days.`;
-    StatisticHours.innerText = `${selectedAge * 365 * 24} hours have passed by since you were born.`;
-    StatisticMinutes.innerText = `You have Lived for ${selectedAge * 365 * 24 * 60} minutes.`
-    StatisticSeconds.innerText = `You have been alive for ${selectedAge * 365 * 24 * 60 * 60} Seconds.`
+    StatisticYears.innerText = `You have Lived for ${ParseNumbers(selectedAge)} years.`;
+    StatisticMonths.innerText = `You have been alive for ${ParseNumbers(selectedAge * 12)} months.`;
+    StatisticWeeks.innerText = `You have Lived for ${ParseNumbers(Math.floor((selectedAge * 365) / 7))} weeks.`;
+    StatisticDays.innerText = `You have been alive for ${ParseNumbers(selectedAge*365)} days.`;
+    StatisticHours.innerText = `${ParseNumbers(selectedAge*365*24)} hours have passed by since you were born.`;
+    StatisticMinutes.innerText = `You have Lived for ${ParseNumbers(selectedAge*365*24*60)} minutes.`
+    StatisticSeconds.innerText = `You have been alive for ${ParseNumbers(selectedAge*365*24*60*60)} Seconds.`
 
     switch(selectedGender) {
         case "Male":
             StatisticYears.style.color = "#365CC1";
-            StatisticDays.style.color = "#365CC1";
-            StatisticMinutes.style.color = "#365CC1";
+            StatisticWeeks.style.color = "#365CC1";
+            StatisticHours.style.color = "#365CC1";
+            StatisticSeconds.style.color = "#365CC1";
             break;
 
         case "Female":
             StatisticYears.style.color = "#C13636";
-            StatisticDays.style.color = "#C13636";
-            StatisticMinutes.style.color = "#C13636";
+            StatisticWeeks.style.color = "#C13636";
+            StatisticHours.style.color = "#C13636";
+            StatisticSeconds.style.color = "#C13636";
             break;
 
         case "Other":
             StatisticYears.style.color = "#A6E4A1";
-            StatisticDays.style.color = "#A6E4A1";
-            StatisticMinutes.style.color = "#A6E4A1";
+            StatisticWeeks.style.color = "#A6E4A1";
+            StatisticHours.style.color = "#A6E4A1R";
+            StatisticSeconds.style.color = "#A6E4A1R";
             break;
     }
+}
+
+// Utilities
+
+function ParseNumbers(numbers) {
+    let returnString = "";
+    numbers = String(numbers).split("");
+
+    let counter = 0;
+
+    numbers.forEach(element => {
+        if ((numbers.length - counter)%3 == 0) returnString += " ";
+        returnString += element;
+
+        
+        counter ++;
+    });
+
+    return returnString;
 }
