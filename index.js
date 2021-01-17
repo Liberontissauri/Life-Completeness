@@ -23,6 +23,10 @@ const thirdScreen = document.querySelector("#ThirdScreen");
 
 const innerProgressBarAge = document.querySelector("#InnerProgressBarAge");
 
+const SideNumberRight = document.querySelector("#SideNumberRight");
+
+const SideNumberInner = document.querySelector("#SideNumberInner");
+
 const barText = document.querySelector("#BarText");
 
 const StatisticYears = document.querySelector("#StatisticYears");
@@ -110,6 +114,7 @@ sumbitAgeButton.addEventListener("click", () => {
 function updateResults() {
     updateResultsInnerProgressBarAge();
     updateResultsText();
+    updateSideBarLimitsText();
 }
 
 function updateResultsInnerProgressBarAge () {
@@ -130,6 +135,28 @@ function updateResultsInnerProgressBarAge () {
             innerProgressBarAge.style.backgroundColor = "#6d6d6d";
             innerProgressBarAge.style.width = Math.floor((selectedAge/73.2)*100) + "%";
             barText.innerText = `Congratulations, you have already lived ${Math.floor((selectedAge/73.2)*100)}% of your life!`
+            break;
+    }
+}
+
+function updateSideBarLimitsText() {
+    switch(selectedGender) {
+        case "Male":
+            SideNumberRight.innerText = "71"
+            SideNumberInner.innerText = selectedAge;
+            SideNumberInner.style.color = "#365CC1";
+            break;
+
+        case "Female":
+            SideNumberRight.innerText = "76"
+            SideNumberInner.innerText = selectedAge;
+            SideNumberInner.style.color = "#C13636";
+            break;
+
+        case "Other":
+            SideNumberRight.innerText = "73"
+            SideNumberInner.innerText = selectedAge;
+            SideNumberInner.style.color = "#6d6d6d";
             break;
     }
 }
@@ -161,8 +188,8 @@ function updateResultsText() {
         case "Other":
             StatisticYears.style.color = "#A6E4A1";
             StatisticWeeks.style.color = "#A6E4A1";
-            StatisticHours.style.color = "#A6E4A1R";
-            StatisticSeconds.style.color = "#A6E4A1R";
+            StatisticHours.style.color = "#A6E4A1";
+            StatisticSeconds.style.color = "#A6E4A1";
             break;
     }
 }

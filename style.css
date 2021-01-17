@@ -279,3 +279,44 @@ body {
     margin-bottom: 150px;
 }
 
+.SideBarNumber {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+#SideNumberLeft {
+    position: relative;
+
+    margin-right: 30px;
+    padding-left: 30px;
+
+    color: #6d6d6d;
+    font-family: "roboto";
+    font-size: 20pt;
+}
+
+#SideNumberRight {
+    margin-left: 30px;
+
+    padding-right: 30px;
+
+    color: #6d6d6d;
+    font-family: "roboto";
+    font-size: 20pt;
+}
+
+#SideNumberInner {
+    position: relative;
+
+    text-align: end;
+
+    top: 34px;
+    left: 45px;
+
+    color: #6d6d6d;
+    font-family: "roboto";
+    font-size: 20pt;
+}
