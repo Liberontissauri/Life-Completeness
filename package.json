@@ -1,0 +1,20 @@
+{
+  "name": "life-completeness",
+  "version": "1.0.0",
+  "description": "A website to check how much have u already lived.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liberontissauri/Life-Completeness.git"
+  },
+  "author": "Liberontissauri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Liberontissauri/Life-Completeness/issues"
+  },
+  "homepage": "https://github.com/Liberontissauri/Life-Completeness#readme"
+}
